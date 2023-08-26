@@ -59,13 +59,14 @@ const AllocationForm = (props) => {
                 <option value="Reduce" name="Reduce">Reduce</option>
                   </select>
 
-                    <input
-                        required='required'
-                        type='number'
-                        id='cost'
-                        value={cost}
-                        style={{ marginLeft: '2rem' , size: 10}}
-                        onChange={(event) => setCost(event.target.value)}>
+                    <input 
+                        required='required' // Este atributo indica que el campo es obligatorio y no puede dejarse en blanco.
+                        type='number' // Este atributo indica que el campo es de tipo numérico.
+                        id='cost' // El atributo 'id' es un identificador único para este campo, que puede ser útil para seleccionarlo con CSS o JavaScript.
+                        value={cost} // El valor del campo se toma de la variable 'cost'. Esto significa que el valor inicial del campo será el valor actual de 'cost'.
+                        style={{ marginLeft: '2rem' , size: 10}} // Este atributo permite definir estilos CSS para el campo.
+                        onChange={(event) => setCost(event.target.value)}// Esta función se ejecutará cuando cambie el valor del campo. Actualiza la variable 'cost' con el nuevo valor ingresado. 
+                        > 
                         </input>
 
                     <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '2rem' }}>
