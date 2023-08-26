@@ -3,8 +3,13 @@ import { AppContext } from '../context/AppContext';
 
 const Budget = () => {
     // Obtener el valor de budget y la función para actualizarlo desde el contexto
+    // use context es un hook que permite acceder al contexto desde cualquier componente
     const { budget, dispatch, expenses, currency } = useContext(AppContext);
 
+    //este código utiliza el método .reduce() para iterar a través del array expenses y sumar los valores de item.
+    //cost de cada elemento. Al final de esta operación, 
+    //totalExpenses contendrá la suma de todos los costos de los elementos en el array expenses.
+    
     const totalExpenses=expenses.reduce((sum,item)=> {
         return (sum = sum + item.cost);
 
